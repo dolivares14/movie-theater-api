@@ -3,5 +3,7 @@ export default interface Theater{
     capacity:number;
     type:string;
     MovieTheater:string;
+    working:boolean;
+    img:string;
 
 }

@@ -4,6 +4,7 @@ import MovieFunction from "../interface/function"
 const functionSchema= new Schema({
     movie:{type:String,required:true},
     duration:{type:String,required:true},
+    room:{type:String,required:true},
     available:{type:[Map],for:String},
     startingTime:{type:Date,required:true},
     endingTime:{type:Date,required:true},

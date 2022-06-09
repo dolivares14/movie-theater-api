@@ -3,6 +3,8 @@ import dbconnect from "./database"
 import "dotenv"
 
 import MovieRouter from "./routes/movies.routes"
+import TheaterRouter from "./routes/theaters.routes"
+import functionRouter from "./routes/function.routes"
 
 const app= express()
 
@@ -12,6 +14,8 @@ app.use(express.urlencoded({extended:false}))
 // routes
 
 app.use('/movies',MovieRouter)
+app.use('/theaters',TheaterRouter)
+app.use('/functions')
 
 
 // app started

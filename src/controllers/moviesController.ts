@@ -24,10 +24,12 @@ export const getMovie= async (req:Request,res:Response,next:NextFunction)=>{
 
 
 export const createMovie=async (req:Request,res:Response,next:NextFunction)=>{
+    
     try {
+        
         const {title,sinopsis,genres,pgRating,duration,imgs,trailers} = req.body
 
-        const exist= await movie.findOne(title)
+        const exist= await movie.findOne({title})
         if(exist)
             return res.status(404).json({message:"Movie already exist"})
 
